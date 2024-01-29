@@ -1,0 +1,10 @@
+let hrs = document.getElementById("hrs")
+let min = document.getElementById("min")
+let sec = document.getElementById("sec")
+setInterval(()=>{
+    let valid = new Date()
+    console.log(valid)
+    hrs.innerHTML = (valid.getHours() < 10 ? "0" : " ") + valid.getHours()
+    min.innerHTML = (valid.getMinutes() < 10 ? "0" : " ") + valid.getMinutes()
+    sec.innerHTML = (valid.getSeconds() < 10 ? "0" : " ") + valid.getSeconds()
+},1000)
